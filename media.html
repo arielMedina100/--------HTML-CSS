@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header>
+        <img src="./pictures/logo.png" alt="mardi gras logo" class="logo">
+        <nav class="navbar">
+            <ul class="nav_links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="media.html">MEDIA</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <img src="./pictures/banner.jpg" alt="">
+        <h1 class="h1">Media</h1>
+    </div>
+
+    <h3 class="funders" style="justify-content: start;display: flex;">Mardi Gras 2022</h3>
+    <iframe width="1000" height="500" src="https://www.youtube.com/embed/C8mJ2C2cbd0" title="Mardi Gras 2022"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen style="align-items: center;"></iframe>
+    <h2 class="funders">The Funders</h2>
+    <div class="con1">
+        <img src="pictures/hotel.png" style="height: 300px; width: 250px;" alt="sheraton hotel">
+        <img src="pictures/walkon.jpg" style="height: 300px ;width: 250px;" alt="walkon">
+        <img src="pictures/acehotel.jpg" style="height: 300px; width: 250px;" alt="ace hotel">
+        <img src="pictures/ritzhotel.jpg" style="height: 300px; width: 250px; " alt="ritz hotel">
+        <img src=" pictures/PremiumParking.png" style="width: 250px;" alt=" Premium Parking">
+        <img src="pictures/LCM-mobile.png" style="height: 300px;width: 250px; " alt="LCM-mobile">
+        <img src="pictures/mqdefault.jpg" style="width: 250px; " alt="musea">
+        <img src="pictures/hauntedmuseum.jpg" alt="">
+    </div>
+    <footer>
+        <p>Copyright © 2023, Ariel Medina
+            <br> <br> All rights reserved.
+        </p>
+        <p>Address: 123 Main St, Anytown, USA</p>
+    </footer>
+    <script>
+        const lightbox = document.createElement('div');
+        lightbox.id = 'lightbox';
+        document.body.appendChild(lightbox)
+        const images = document.querySelectorAll('img')
+        images.forEach(image => {
+            image.addEventListener('click', e => {
+                lightbox.classList.add('active')
+                const img = document.createElement('img')
+                img.src = image.src
+                while (lightbox.firstChild) {
+                    lightbox.removeChild(lightbox.firstChild)
+                }
+                lightbox.appendChild(img)
+            })
+        })
+        lightbox.addEventListener('click', e => {
+            if (e.target !== e.currentTarget) return
+            lightbox.classList.remove('active')
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,475 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  margin: auto;
+}
+
+.container img {
+  width: 100%;
+  height: 550px;
+}
+
+.h1 {
+  position: absolute;
+  top: 39%;
+  right: 47%;
+  font-family: "Henny Penny", cursive;
+  font-size: 3.5rem;
+}
+
+.container1 {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.container1 h2 {
+  margin-bottom: 240px;
+  padding: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  margin: auto;
+}
+
+.container img {
+  width: 100%;
+  height: 550px;
+}
+
+.h1 {
+  position: absolute;
+  top: 39%;
+  right: 47%;
+  font-family: "Henny Penny", cursive;
+  font-size: 3.5rem;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+
+.contact1 {
+  text-align: center;
+  color: #9453a6;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+p {
+  font-family: Roboto;
+  font-weight: 600;
+}
+
+.container {
+  position: relative;
+  margin: auto;
+}
+
+.container img {
+  width: 100%;
+  height: 550px;
+}
+
+.h1 {
+  position: absolute;
+  top: 39%;
+  right: 47%;
+  font-family: "Henny Penny", cursive;
+  font-size: 3.5rem;
+}
+
+.accordion {
+  background-color: #9453a6;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  width: 1000px;
+  border: 1px solid #000;
+}
+
+.active,
+.accordion:hover {
+  background-color: white;
+  color: #f2cc0f;
+}
+
+.accordion:after {
+  content: "+";
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "−";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  width: 1000px;
+  text-align: justify;
+}
+
+.container3 {
+  display: block;
+  padding: 20px;
+  margin-left: 400px;
+}
+
+.accordion1 {
+  text-align: center;
+  margin-right: 500px;
+  color: #9453a6;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2cc0f;
+}
+
+header {
+  display: flex;
+  width: 100vw;
+  height: 8vh;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: #f2cc0f;
+}
+
+.logo {
+  width: 10vw;
+  cursor: pointer;
+  margin-top: 120px;
+  margin-left: 10vh;
+  z-index: 2;
+}
+
+.nav_links {
+  list-style-type: none;
+}
+
+.nav_links li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.nav_links li a {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out 0s;
+  color: #9453a6;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-left: -50px;
+  padding: 80px;
+}
+
+.nav_links li a:hover {
+  color: white;
+}
+
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+.slideshow-container img {
+  width: 100%;
+  height: 550px;
+}
+
+.numbertext {
+  color: #fff;
+  font-size: 2rem;
+  /* padding: 8px 12px; */
+  position: absolute;
+  top: 15%;
+  right: 45%;
+  font-family: "Henny Penny", cursive;
+  right: 700px;
+  margin-top: 150px;
+}
+
+.the_count {
+  right: 700px;
+  margin-top: 150px;
+  position: absolute;
+  bottom: 100%;
+  right: 20px;
+  color: #000;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #9453a6;
+  font-size: 2rem;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 35%;
+  left: -75px;
+  font-family: henny penny;
+  line-height: 50px;
+}
+
+/* The dots/bullets/indicators */
+.container1 {
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.container2 {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: Roboto;
+  text-align: justify;
+}
+
+.container2 p {
+  width: 40vw;
+  display: flex;
+  border: 1px solid #000000;
+  background-color: #ccc;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.mayor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.text-container {
+  float: left;
+}
+
+.con1 {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 200px;
+}
+
+.con2 {
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #ccc;
+}
+
+footer p {
+  padding: 20px;
+  font-family: Roboto;
+}
+
+#countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  font-family: Henny Penny;
+}
+
+#countdown > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+}
+
+#countdown span {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+#countdown .label {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.funders {
+  text-align: center;
+  padding: 20px;
+  font-size: 3rem;
+  font-family: Roboto;
+  color: #9453a6;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  margin: auto;
+}
+
+.container img {
+  width: 100%;
+  height: 550px;
+}
+
+.h1 {
+  position: absolute;
+  top: 39%;
+  right: 47%;
+  font-family: "Henny Penny", cursive;
+  font-size: 3.5rem;
+}
+
+.con1 {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  justify-content: space-evenly;
+  align-items: center;
+  grid-gap: 10px;
+  height: 100vh;
+}
+
+.con1 img {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+
+#lightbox {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+#lightbox.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  padding: 4px;
+  background-color: black;
+  border: 2px solid white;
+}/*# sourceMappingURL=main.css.map */

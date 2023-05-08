@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mardi Gras New Orleans</title>
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header>
+        <img src="./pictures/logo.png" alt="mardi gras logo" class="logo">
+        <nav class="navbar">
+            <ul class="nav_links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="media.html">MEDIA</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+
+            <img src="pictures/banner.jpg">
+            <div class="numbertext">
+
+                <div id="countdown">
+                    <h3 class="the_count">Countdown Ti'll Mardi Gras</h3>
+                    <div>
+                        <span id="days"></span>
+                        <div class="label">Days</div>
+                    </div>
+                    <div>
+                        <span id="hours"></span>
+                        <div class="label">Hours</div>
+                    </div>
+                    <div>
+                        <span id="minutes"></span>
+                        <div class="label">Minutes</div>
+                    </div>
+                    <div>
+                        <span id="seconds"></span>
+                        <div class="label">Seconds</div>
+                    </div>
+                </div>
+            </div>
+            <!--             <div class="text">
+                <p id="demo"></p><br>
+            </div> -->
+        </div>
+        <div class="mySlides fade">
+            <img src="pictures/slider2.jpg">
+            <div class="text"></div>
+        </div>
+        <div class="mySlides fade">
+            <img src="pictures/slider3.jpg">
+            <div class="text"></div>
+        </div>
+        <div class="mySlides fade">
+            <img src="pictures/slider4.jpg">
+            <div class="text"></div>
+        </div>
+        <div class="mySlides fade">
+            <img src="pictures/slider1.jpg">
+            <div class="text"></div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        <!-- Next and previous buttons -->
+        <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div class="container1">
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+    </div>
+    <script>
+
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+        // Set the date we're counting down to
+        /* var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            document.getElementById("demo").innerHTML = days + " Days<br>" + hours + " Hours<br>"
+                + minutes + " Min<br>" + seconds + " Sec<br>";
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000); */
+        // Set the date to count down to (year, month (0-indexed), day, hour, minute, second)
+        const countDownDate = new Date("2024-02-13T00:00:00Z").getTime();
+
+        // Update the countdown every second
+        const countdownTimer = setInterval(function () {
+
+            // Get the current time in milliseconds
+            const now = new Date().getTime();
+
+            // Calculate the time remaining
+            const timeRemaining = countDownDate - now;
+
+            // Calculate days, hours, minutes, and seconds remaining
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            // Display the countdown
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+
+            // If the countdown is over, stop the countdown timer
+            if (timeRemaining < 0) {
+                clearInterval(countdownTimer);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+
+    </script>
+    <div class="container2">
+        <p class="mardiInfo"><img src="pictures/mardi-gras.jpg" alt="mardi-gras" style="width: 50%;padding: 5px;">The
+            festival season
+            varies from city to city, as some traditions, such as the one in New
+            Orleans, Louisiana,
+            consider
+            Mardi Gras to stretch the entire period from Twelfth Night (the last night of Christmas which begins
+            Epiphany)
+            to Ash
+            Wednesday.[4][5] Others treat the final three-day period before Ash Wednesday as the Mardi Gras.
+
+            In Mobile, Alabama, Mardi Gras–associated social events begin in November, followed by mystic society balls
+            on
+            Thanksgiving, then New Year's Eve, followed by parades and balls in January and February, celebrating up to
+            midnight
+            before Ash Wednesday. In earlier times, parades were held on New Year's Day. Carnival is an important
+            celebration in
+            Anglican and Catholic European nations.</p>
+        <p class="mardiInfo2">Epiphany, January 6, is the official end of the Christmas season, but it also kicks off
+            Carnival season in
+            New Orleans.
+            Although some people use Carnival and Mardi Gras interchangeably, they are actually different things.
+            Carnival is a time
+            to eat, drink and be merry before the rigorous fasting and sacrifice during Lent. It is filled with parades,
+            balls and
+            other celebrations leading up to Mardi Gras, which is French for “Fat Tuesday.” Mardi Gras is always the
+            Tuesday before
+            Ash Wednesday. Carnival officially ends at midnight on Fat Tuesday and Lent begins.
+
+            Phunny Phorty Fellows, a band of Twelfth Night revelers, holds its annual ride on the St. Charles Streetcar
+            January 6,
+            also called Twelfth Night. In recent years, they have been followed by two other streetcar parades – the
+            Funky Uptown
+            Krewe, also on the St. Charles line and the Société des Champs Elysée on the Rampart-St. Claude Streetcar.
+            Joan of Arc’s
+            birthday is also celebrated on Epiphany. The Krewe of Joan of Arc features historical characters in medieval
+            dress
+            parading through the French Quarter.</p>
+        <p>The first record of Mardi Gras being celebrated in Louisiana was at the mouth of the Mississippi River in
+            what is now
+            lower Plaquemines Parish, Louisiana, on March 2, 1699. Iberville, Bienville, and their men celebrated it as
+            part of an
+            observance of Catholic practice. The date of the first celebration of the festivities in New Orleans is
+            unknown. A 1730
+            account by Marc-Antoine Caillot celebrating with music and dance, masking and costuming (including
+            cross-dressing).[2]
+            An account from 1743 that the custom of Carnival balls was already established. Processions and wearing of
+            masks in the
+            streets on Mardi Gras took place. They were sometimes prohibited by law, and were quickly renewed whenever
+            such
+            restrictions were lifted or enforcement waned.
+
+            In 1833, Bernard Xavier de Marigny de Mandeville, a rich plantation owner of French descent raised money to
+            fund an
+            official Mardi Gras celebration. James R. Creecy in his book Scenes in the South, and Other Miscellaneous
+            Pieces
+            describes New Orleans Mardi Gras in 1835:</p>
+    </div>
+    <div class="mayor">
+        <img src="pictures/the mayor.jpg" alt="walkons" style="width: 10%;  float: left;margin-right: 20px;">
+        <div class="text-container">
+            <h3 style="margin-top: 0;">LaToya Cantrell</h3><br>
+            <p style="margin-bottom: 0; width: 400px;text-align: justify;">Cantrell returned to New Orleans in 1999,
+                settling in the
+                Broadmoor
+                neighborhood. In 2003, she joined the board of the
+                Broadmoor Improvement Association and became president of the association in 2004.[4] After the 2005
+                levee failures in
+                Greater New Orleans following Hurricane Katrina, the Broadmoor neighborhood flooded severely and
+                remained mostly
+                deserted for months afterward
+            </p>
+        </div>
+    </div>
+    <!-- <h3 class="funders">the funders</h3>
+    <div class="con1">
+        <img src="pictures/hotel.png" style="height: 300px; width: 250px;" alt="sheraton hotel">
+        <img src="pictures/walkon.jpg" style="height: 300px ;width: 250px;" alt="walkon">
+        <img src="pictures/acehotel.jpg" style="height: 300px; width: 250px;" alt="ace hotel">
+        <img src="pictures/ritzhotel.jpg" style="height: 300px; width: 250px; " alt="ritz hotel">
+        <br>
+    </div>
+    <div class="con2">
+        <img src=" pictures/PremiumParking.png" style="width: 250px;" alt=" Premium Parking">
+        <img src="pictures/LCM-mobile.png" style="height: 300px;width: 250px; " alt="LCM-mobile">
+        <img src="pictures/mqdefault.jpg" style="width: 250px; " alt="musea">
+        <img src="pictures/hauntedmuseum.jpg" alt="">
+    </div> -->
+    <footer>
+        <p>Copyright © 2023, Ariel Medina
+            <br> <br> All rights reserved.
+        </p>
+        <p>Address: 123 Main St, Anytown, USA</p>
+    </footer>
+</body>
+
+</html>

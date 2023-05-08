@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header>
+        <img src="./pictures/logo.png" alt="mardi gras logo" class="logo">
+        <nav class="navbar">
+            <ul class="nav_links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="media.html">MEDIA</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <img src="./pictures/banner.jpg" alt="">
+        <h1 class="h1">Conact</h1>
+    </div>
+    <h2 class="contact1">Please Contact Us To Be Updated!</h2>
+    <div id="contact-form">
+        <form name="contactForm" onsubmit="return validateForm()" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="text">Message:</label>
+            <textarea id="text" name="text"></textarea><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+        <script>
+            function validateForm() {
+                var name = document.forms["contactForm"]["name"].value;
+                var lastName = document.forms["contactForm"]["last_name"].value;
+                var email = document.forms["contactForm"]["email"].value;
+                var text = document.forms["contactForm"]["text"].value;
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (name == "" || lastName == "" || email == "" || text == "") {
+                    alert("Please fill out all fields.");
+                    return false;
+                }
+
+                if (!emailRegex.test(email)) {
+                    alert("Please enter a valid email address.");
+                    return false;
+                }
+            }
+        </script>
+
+</body>
+
+</html>

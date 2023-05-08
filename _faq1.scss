@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p {
+    font-family: Roboto;
+    font-weight: 600;
+}
+
+.container {
+    position: relative;
+    margin: auto;
+}
+
+.container img {
+    width: 100%;
+    height: 550px;
+}
+
+.h1 {
+    position: absolute;
+    top: 39%;
+    right: 47%;
+    font-family: 'Henny Penny', cursive;
+    font-size: 3.5rem;
+}
+
+.accordion {
+    background-color: #9453a6;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    width: 1000px;
+    border: 1px solid #000;
+
+}
+
+.active,
+.accordion:hover {
+    background-color: white;
+    color: #f2cc0f;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    width: 1000px;
+    text-align: justify;
+}
+
+.container3 {
+    display: block;
+    padding: 20px;
+    margin-left: 400px;
+}
+
+.accordion1 {
+    text-align: center;
+    margin-right: 500px;
+    color: #9453a6;
+}
